@@ -36,7 +36,7 @@
 //   system("pause");
 //   return 0;
 // }
-
+  
 //3计算单数累乘
 int main()
 {
