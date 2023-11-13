@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
-//当程序运行不了时回顾一遍代码找出细节的错误
+#include <time.h>
+
 void print_array(int arr[], int len)
 {
   for (int i = 0; i < len; i++)
@@ -12,10 +13,12 @@ void print_array(int arr[], int len)
 
 void insertsort(int arr[], int len)
 {
-  for (int i = 1; i < len; i++)
+  int i, j, key;
+
+  for (i = 0; i < len; i++)
   {
-    int key = arr[i];//记录要交换的数
-    int j = i - 1;//记录开始时前一个数的位置
+    key = arr[i];
+    j = i - 1;
 
     while (j >= 0 && arr[j] > key)
     {
@@ -29,13 +32,23 @@ void insertsort(int arr[], int len)
 
 int main()
 {
-  int arr[] = {2, 4, 8, 0, 5, 7, 1, 3, 9};
+  srand((unsigned)time(NULL));
+
+  int arr[10];
+
+  for (int i = 0; i < 10; i++)
+  {
+    arr[i] = rand() % 50 + 50;
+  }
+
   int len = sizeof(arr) / sizeof(arr[0]);
 
+  printf("before: ");
   print_array(arr, len);
 
   insertsort(arr, len);
 
+  printf("after: ");
   print_array(arr, len);
 
   system("pause");
