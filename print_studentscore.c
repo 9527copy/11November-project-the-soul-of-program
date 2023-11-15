@@ -1,8 +1,8 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
-#define SUM_STUDENT 10
-#define SUM_COURSE 3
+#define SUM_STUDENT 5
+#define SUM_COURSE 4
 
 int main()
 {
@@ -18,7 +18,7 @@ int main()
     }
   }
 
-  printf("C语言\t高数\t英语\t总分\n");
+  printf("C语言\t高数\t英语\t物理\t总分\n");
   for (i = 0; i < SUM_STUDENT; i++)
   {
     sumscore = 0;
