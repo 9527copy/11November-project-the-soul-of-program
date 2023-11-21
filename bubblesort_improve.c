@@ -30,13 +30,13 @@ int main()
         t = arr[j];
         arr[j] = arr[j + 1];
         arr[j + 1] = t;
-        flag = 1;
-        count++;
+        flag = 1;//交换了命题为真
+        count++;//记录交换了多少次（交换次数是否减少）
       }
     }
     if (flag == 0)
     {
-      break;
+      break;//没有交换命题为假，退出此层循环
     }
   }
 
