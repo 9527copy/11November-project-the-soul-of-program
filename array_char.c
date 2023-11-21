@@ -27,7 +27,7 @@ int main()
   printf("\n");
 
   int num=strlen(strcat(str,c));
-  printf("两个连成一句话的位数为：%d\n",num);
+  printf("两个连成一句话的位数为：%d\n",num);//为什么最后num的值变成了35
   
   system("pause");
   return 0;
