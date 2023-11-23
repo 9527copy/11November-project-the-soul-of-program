@@ -1,7 +1,7 @@
 #include<stdio.h>
 #include<stdlib.h>
 #include<string.h>
-//输入一串字符输出除字符以外的所有字符
+//输入一串字符，输出除字符以外的所有字符
 int main()
 {
   int i,key;
@@ -22,7 +22,7 @@ int main()
     }
     else
     {
-      i++;
+      i++;//索引到要操作的数
     }
   }
 
