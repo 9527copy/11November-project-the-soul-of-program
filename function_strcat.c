@@ -5,37 +5,21 @@
 int main()
 {
   char str1[50],str2[10];
-  int i,len1,len2;
+  int i;
 
   printf("请输入第一个字符串：\n");
   gets(str1);
   printf("请输入第二个字符串：\n");
   gets(str2);
 
-  for(i=0;i<50;i++)
+  for(i=strlen(str1)-1;i<strlen(str2)+strlen(str1)-2;i++)
   {
-    while(str1[i]!='\0')
-    {
-      len1++;
-    }
+    str1[i]=str2[i-strlen(str1)+1];
   }
 
-  for(i=0;i<10;i++)
-  {
-    while(str2[i]!='\0')
-    {
-      len2++;
-    }
-  }
+  str1[strlen(str2)+strlen(str1)-2]='\0';
 
-  for(i=0;i<len2;i++)
-  {
-    str1[len1++]=str2[i];
-  }
-
-  str1[len1]='\0';
-
-  printf("连接后的字符串为：");
+  printf("连接后的字符串为：\n");
   
   puts(str1);
 
