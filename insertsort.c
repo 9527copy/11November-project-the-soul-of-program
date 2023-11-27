@@ -15,7 +15,7 @@ void insertsort(int arr[], int len)
 {
   int i, j, key;
 
-  for (i = 0; i < len; i++)
+  for (i = 1; i < len; i++)
   {
     key = arr[i];
     j = i - 1;
