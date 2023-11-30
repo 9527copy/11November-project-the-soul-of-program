@@ -1,8 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
-//找到3000之内的亲和数
-// 11.29未完成
-//11.30完成但是太慢，改进
+//差不多太慢了
 int main()
 {
   int i, j, k, l, sumyA = 0, sumyB = 0;
@@ -21,19 +19,20 @@ int main()
           }
         }
 
-        for (l = 1; l < j; l++)
+        if (sumyA == j)
         {
-          if (j % l == 0)
+          for (l = 1; l < j; l++)
           {
-            sumyB += l;
+            if (j % l == 0)
+            {
+              sumyB += l;
+            }
+          }
+          if (sumyB == i)
+          {
+            printf("(%d,%d)\n", i, j);
           }
         }
-
-        if (i == sumyB && j == sumyA)
-        {
-          printf("(%d,%d)\n", i, j);
-        }
-
         sumyA = 0;
         sumyB = 0;
       }
